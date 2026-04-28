@@ -28,17 +28,7 @@ const LoginPage = () => {
         }
 
         if (error) {
-            console.error("Sign-in error details:", {
-                message: error.message,
-                status: error.status,
-                statusText: error.statusText,
-                code: error.code,
-                error: error.error,
-                keys: Object.getOwnPropertyNames(error),
-            });
             toast.error(
-                error.error?.message ||
-                error.message ||
                 'Invalid email or password. Please try again!'
             );
         }
