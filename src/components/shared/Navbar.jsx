@@ -26,7 +26,7 @@ const Navbar = () => {
                             <Image src={user?.image || avatar} alt="User Avatar" width={35} height={35} className="rounded-full h-9 w-9" />
                             <span className="text-sm font-bold text-(--dark2)">{user.name}</span>
                         </div>
-                        <button onClick={() => signOut()} className="btn bg-[#403F3F] text-white">SingOut</button>
+                        <button onClick={() => signOut()} className="btn bg-[#403F3F] text-white">Logout</button>
                     </div>
                 ) : (
                     <button className="btn bg-[#403F3F] text-white">
