@@ -3,7 +3,8 @@ import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextFi
 import Link from "next/link";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import { authClient } from "@/lib/auth-client";
 
 const LoginPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -61,7 +62,7 @@ const LoginPage = () => {
                                 <div className="divider text-gray-400"></div>
                             </div>
 
-                            <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+                            <Form className="flex sm:w-96 flex-col gap-4" onSubmit={onSubmit}>
                                 {/* Email field */}
                                 <TextField
                                 

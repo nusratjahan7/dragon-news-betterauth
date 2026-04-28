@@ -3,7 +3,8 @@ import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextFi
 import Link from "next/link";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import { authClient } from "@/lib/auth-client";
 const RegisterPage = () => {
 
     const [isVisible, setIsVisible] = useState(false);
@@ -18,6 +19,7 @@ const RegisterPage = () => {
             name: userData.name,
             email: userData.email,
             password: userData.password,
+            image: userData.photoURL,
             callbackURL: '/login',
         })
         console.log("sign up response", { data, error })
@@ -60,7 +62,7 @@ const RegisterPage = () => {
                             <div className="divider text-gray-400"></div>
                         </div>
 
-                        <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+                        <Form className="flex md:w-96 flex-col gap-4" onSubmit={onSubmit}>
 
                             {/* name  */}
                             <TextField

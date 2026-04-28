@@ -12,6 +12,7 @@
     "@better-auth/mongo-adapter": "^1.6.9",
     "@heroui/react": "^3.0.3",
     "@heroui/styles": "^3.0.3",
+    "better-auth": "^1.6.9",
     "date-fns": "^4.1.0",
     "mongodb": "^7.2.0",
     "next": "16.2.4",
