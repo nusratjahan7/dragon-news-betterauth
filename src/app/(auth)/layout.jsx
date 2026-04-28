@@ -3,8 +3,10 @@ import Navbar from "@/components/shared/Navbar";
 const AuthLayout = ({ children }) => {
     return (
         <>
-            <Navbar />
+           <div className="bg-(--dark7)">
+             <Navbar />
             { children }
+           </div>
         </>
     );
 };

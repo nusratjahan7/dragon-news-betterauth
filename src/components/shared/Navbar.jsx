@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 
 const Navbar = () => {
     return (
-        <div className="flex items-center justify-between my-6  w-11/12 mx-auto">
+        <div className="flex items-center justify-between py-6  w-11/12 mx-auto">
             <div></div>
            <ul className="flex items-center sm:ml-30 gap-3 text-(--dark3)">
             <li><NavLink href={'/'} >Home</NavLink></li>
@@ -14,7 +14,7 @@ const Navbar = () => {
            </ul>
 
            <div className="flex items-center justify-center gap-2">
-            <Image src={avatar} alt="User Avatar" width={35} height={35} />
+            <Image src={avatar} alt="User Avatar" width={35} height={35} className="rounded-full" />
             <button className="btn bg-[#403F3F] text-white"><Link href={'/login'}>Login</Link></button>
            </div>
         </div>
