@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+    --dark3: #706F6F;
+    --dark6: #E7E7E7;
+    --dark2: #403F3F;
+    --dark7: #F3F3F3;
+    --dark4: #9F9F9F;
+    --orange: #FF8C47;
+    --pink: #D72050;
+    --blue: #3B599C;
+}
