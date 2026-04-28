@@ -23,7 +23,10 @@ const RegisterPage = () => {
             callbackURL: '/login',
         })
         console.log("sign up response", { data, error })
-        if (error) {
+        if (data) {
+            window.location.href = '/login';
+        }
+       if (error) {
             console.error("Register error details:", {
                 message: error.message,
                 status: error.status,
@@ -86,7 +89,7 @@ const RegisterPage = () => {
 
                             >
                                 <Label className="text-(--dark2)">Photo URL</Label>
-                                <Input name="photoURL" placeholder="Enter your photo URL"  className="border border-(--dark7)" />
+                                <Input name="photoURL" placeholder="Enter your photo URL" className="border border-(--dark7)" />
                                 <FieldError />
                             </TextField>
 
@@ -103,7 +106,7 @@ const RegisterPage = () => {
                                 }}
                             >
                                 <Label className="text-(--dark2)">Email</Label>
-                                <Input name="email" placeholder="Enter your email"  className="border border-(--dark7)" />
+                                <Input name="email" placeholder="Enter your email" className="border border-(--dark7)" />
                                 <FieldError />
                             </TextField>
 
@@ -128,8 +131,8 @@ const RegisterPage = () => {
                                 <InputGroup className="w-full border border-(--dark7) rounded-xl ">
                                     <InputGroup.Input
                                         name="password"
-                                       
-                                         
+
+
                                         placeholder="Enter your password"
                                         type={isVisible ? "text" : "password"}
 
